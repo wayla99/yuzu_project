@@ -26,16 +26,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+
+    <style>
+        button {
+            width: 200px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    @include('layouts.inc.frontend-navbar-main')
-
+    @include('layouts.inc.frontend-navbar')
+    <main class="m-5 d-flex justify-content-center">
         @yield('content')
-
+    </main>
     @include('layouts.inc.frontend-footer')
 </div>
 
+<!-- Scripts -->
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -51,49 +59,5 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"
 ></script>
-<script>
-    // function add_field()
-    // {
-    //     var total_text=document.getElementsByClassName("location");
-    //     total_text=total_text.length+1;
-    //     document.getElementById("field_div").innerHTML=document.getElementById("field_div").innerHTML+
-    //         "<p id='location"+total_text+"_wrapper'>" +
-    //         "<input type='text' name='location' class='form-control form-control-lg rounded-pill' id='location"+total_text+"'>" +
-    //         "</p>";
-    // }
-
-    function GetLocationTextBox(value){
-        return '<p id="location _wrapper"><input name = "location[]" class="form-control form-control-lg rounded-pill" type="text" id="location" value = "' + value + '" />'
-    }
-    function AddTextBox() {
-        var div = document.createElement('DIV');
-        div.innerHTML = GetLocationTextBox("");
-        document.getElementById("TextLocation").appendChild(div);
-    }
-
-    function RecreateLocationTextboxes() {
-        var values = eval('<%=Values%>');
-        if (values != null) {
-            var html = "";
-            for (var i = 0; i < values.length; i++) {
-                html += "<div>" + GetLocationTextBox(values[i]) + "</div>";
-            }
-            document.getElementById("TextLocation").innerHTML = html;
-        }
-    }
-    window.onload = RecreateLocationTextboxes;
-
-    function saveDisbled() {
-        document.getElementById("plus").disabled = true;
-        document.getElementById("save").disabled = true;
-    }
-
-    function submitDisbled(){
-        const btn = document.getElementById('submit');
-        btn.style.backgroundColor = 'salmon';
-        btn.style.color = 'white';
-    }
-</script>
 </body>
 </html>
-

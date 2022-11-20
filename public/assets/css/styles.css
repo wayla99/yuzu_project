@@ -1,0 +1,97 @@
+  html {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+  }
+
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-bar {
+    background-image: url('../images/background.png');
+    background-size: cover;
+  }
+
+  .footer-bar {
+    width: 100%;
+    height: 120px;
+    background-image: url('../images/footer.png');
+    background-size: cover;
+    margin-top: 4rem;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .nav-active {
+    width: 220px;
+  }
+
+  .nav-link,
+  .nav-link:hover {
+    color: #495057;
+  }
+
+  .nav-link.active {
+    color: #ffc107 !important;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: '- ';
+  }
+
+  .bg-pink {
+    background: #c500ff;
+    color: white;
+  }
+
+  .text-indent {
+    text-indent: 2.5rem;
+  }
+
+  .bg-card-body {
+    background: #fff3cd;
+  }
+
+  .bg-cyan {
+    background: #9eeaf9;
+  }
+
+  .bg-gray-300 {
+    background: #dee2e6;
+  }
+
+  .bg-gray-200 {
+    background: #e9ecef;
+  }
+
+  .bg-orange-500 {
+    background: #fd7f13;
+    color: white;
+  }
+
+  .rounded {
+    border-radius: 1.6rem !important;
+  }
+
+  .border-lemon {
+    border: 5px solid #66ff0e;
+  }
+
+  .bg-lemon {
+    background: #5de80d;
+  }
+
+  .timeline {
+    width: 3px;
+    height: 4rem;
+    border-left: 0.4rem dotted #66ff0e;
+  }
